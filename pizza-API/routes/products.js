@@ -1,8 +1,9 @@
 const express = require('express');
+const router = express.Router();
+
 const pizzaData = require('../models/pizza');
 const drinkData = require('../models/drink');
 const packData = require('../models/pack');
-const router = express.Router();
 
 router.get('/pizza', async (req, res) => {
     const products = await pizzaData.find({}); 
